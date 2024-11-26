@@ -11,6 +11,7 @@ set -x
 
 mkdir analysis output
 touch README.md
+echo "# Project Name: DSI Consulting Inc." > README.md
 touch analysis/main.py
 
 # download client data
@@ -32,7 +33,6 @@ ls ./data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
 mkdir -p ./data/processed/server_logs ./data/processed/user_logs ./data/processed/event_logs
-
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 find ./data/raw -type f -name "*server*.log" -exec cp {} ./data/processed/server_logs/ \;
